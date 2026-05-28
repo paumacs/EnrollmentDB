@@ -1,0 +1,2 @@
+-- SAMPLE EXECUTION OF STORED PROCEDURE TO ADD AN ACCOUNTABILITY RECORD
+EXEC dbo.usp_AddAccountability @AccountId=5, @Amount=3000, @DocumentName='Tuition', @Status='Unpaid', @Description='First Semester';

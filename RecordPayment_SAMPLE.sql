@@ -1,0 +1,1 @@
+EXEC dbo.usp_RecordPayment @AccountId=5, @Amount=3000, @PaymentType='Tuition', @ModeOfPayment='Online';

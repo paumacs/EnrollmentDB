@@ -1,0 +1,1 @@
+SELECT dbo.fn_IsAccountCleared(5) AS IsCleared;

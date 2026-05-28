@@ -1,0 +1,1 @@
+EXEC dbo.usp_ResolveAccountability @AccountabilityId=4;   -- assuming ID=4

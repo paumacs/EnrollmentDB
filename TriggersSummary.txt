@@ -1,0 +1,6 @@
+Trigger Name	Event	Description
+trg_ValidateAccountsInsert	INSTEAD OF INSERT	Combined validation: duplicate enrollment, section overflow, prerequisite check.
+trg_UpdateSectionSlots	AFTER UPDATE	Increments/decrements slotsTaken based on enrollment changes.
+trg_AutoCloseAccountability	AFTER UPDATE	Sets dateResolved to current timestamp when accountability status becomes 'Resolved'.
+trg_SetPaymentStatus	AFTER INSERT, UPDATE	Updates Accounts.paymentStatus based on total due vs. total paid. (Requires added column)
+trg_AuditEnrollmentLog	AFTER INSERT, UPDATE	Logs enrollment status changes into EnrollmentAuditLog.

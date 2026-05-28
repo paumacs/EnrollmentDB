@@ -1,0 +1,16 @@
+Routine	Type	Purpose
+usp_ManageEnrolleeAccount	Procedure	Insert or update an enrollee’s personal information and ensure a linked Accounts record exists. Automatically creates an account on first creation.
+usp_ChangePassword	Procedure	Validates old password and updates to new
+usp_SetEnrollment	Procedure	Sets isEnrolled, assigns section/subject, manages section capacity
+usp_LinkDocument	Procedure	Links a document to the student’s account
+usp_AddAccountability	Procedure	Adds a new fee/obligation and updates the circular FK
+fn_GetAccountDashboard	Function	Returns a read‑only dashboard of the student’s entire record
+usp_SubmitDocument	Procedure	Link a new or existing document to a student account; creates or updates the Documents record.
+usp_UpdateDocumentStatus	Procedure	Change the document’s verification status and/or expiry date.
+fn_GetStudentDocuments	Function	Retrieve the linked document (type, issuer, status, expiry, computed validity) for an account/enrollee.
+fn_IsDocumentCompliant	Function	Returns 1 if the student’s linked document is valid and not expired; 0 otherwise.
+usp_ManagePrerequisite	Procedure	Insert/update a generic prerequisite (title + units) in the catalog.
+usp_ManageSubject	Procedure	Insert/update a subject, assign professor, schedule, department, and link its prerequisite.
+usp_RecordCompletion	Procedure	Record that a student has completed a specific subject (necessary for prerequisite tracking).
+fn_IsPrerequisiteMet	Function	Scalar check: returns 1 if the student has passed a subject matching the prerequisite title, else 0.
+fn_GetSubjectDetails	Function	Returns the subject catalog with prerequisite information.
